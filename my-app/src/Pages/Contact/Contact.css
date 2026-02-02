@@ -7,6 +7,13 @@
   padding: 103px 0;
   background: linear-gradient(180deg, #FCFAF7, #FAF3E8);
 }
+.social-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1.2rem;
+}
 
 .contact-container {
   max-width: 1200px;

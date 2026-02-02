@@ -56,27 +56,43 @@ const Contact = () => {
               </span>
             </div>
 
-            {/* Social Media */}
-            {/* <div className="contact-social">
-              <span>
-                {lang === "te"
-                  ? "సోషల్ మీడియా"
-                  : "Follow Us"}
-              </span>
+           {/* Social Media */}
+<div className="contact-social">
+  <span>
+    {lang === "te" ? "సోషల్ మీడియా" : "Follow Us"}
+  </span>
 
-              <div className="social-icons">
-                <a href="#" aria-label="Facebook">
-                  <FaFacebook />
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <FaInstagram />
-                </a>
-                <a href="#" aria-label="Twitter">
-                  <FaTwitter />
-                </a>
-              </div> */}
-            {/* </div> */}
+  <div className="social-icons">
+    <button
+      type="button"
+      className="social-btn"
+      aria-label="Facebook"
+      onClick={() => window.open("https://facebook.com", "_blank")}
+    >
+      <FaFacebook />
+    </button>
+
+    <button
+      type="button"
+      className="social-btn"
+      aria-label="Instagram"
+      onClick={() => window.open("https://instagram.com", "_blank")}
+    >
+      <FaInstagram />
+    </button>
+
+    <button
+      type="button"
+      className="social-btn"
+      aria-label="Twitter"
+      onClick={() => window.open("https://twitter.com", "_blank")}
+    >
+      <FaTwitter />
+    </button>
+  </div>
+</div>
           </div>
+
 
           {/* Contact Form */}
           <div className="contact-form">
