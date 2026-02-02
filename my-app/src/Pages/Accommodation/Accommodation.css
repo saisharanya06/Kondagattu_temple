@@ -1,0 +1,160 @@
+/* ===============================
+   Accommodation & Facilities
+   =============================== */
+
+.accommodation-section {
+  width: 100%;
+  padding: 210px 0;
+  background: linear-gradient(180deg, #FAF3E8, #FCFAF7);
+}
+
+.accommodation-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 16px; /* safe horizontal spacing */
+  text-align: center;
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+.accommodation-header {
+  margin-bottom: 50px;
+}
+
+.accommodation-icon {
+  font-size: 36px;
+  color: #F7931E;
+  margin-bottom: 10px;
+}
+
+.accommodation-header h2 {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #3A1E14;
+}
+
+/* ===============================
+   Facilities Grid
+   =============================== */
+
+.accommodation-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* ===============================
+   Facility Card
+   =============================== */
+
+.facility-card {
+  background: #FFFFFF;
+  padding: 26px 18px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(58, 30, 20, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #F7931E;
+}
+
+.facility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(58, 30, 20, 0.25);
+}
+
+.facility-card svg {
+  font-size: 30px;
+  color: #F2C94C;
+  margin-bottom: 12px;
+}
+
+.facility-card p {
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-size: 15px;
+  color: #4A2C1D;
+  line-height: 1.4;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+/* ---------- PHONE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  .accommodation-section {
+    padding-top: calc(72px + 40px); /* header safe */
+    padding-bottom: 100px;
+  }
+
+  .accommodation-container {
+    max-width: 420px;
+    padding: 22px 28px;
+  }
+
+  .accommodation-header h2 {
+    font-size: 26px;
+  }
+
+  .accommodation-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .facility-card {
+    padding: 22px 16px;
+  }
+
+  .facility-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- iPAD / TABLET (601px – 1024px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .accommodation-section {
+    padding-top: calc(80px + 60px);
+    padding-bottom: 120px;
+  }
+
+  .accommodation-container {
+    max-width: 760px;
+  }
+
+  .accommodation-header h2 {
+    font-size: 30px;
+  }
+
+  .accommodation-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .facility-card {
+    padding: 24px 18px;
+  }
+
+  .facility-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- LAPTOP / DESKTOP (≥ 1025px) ---------- */
+@media (min-width: 1025px) {
+
+  .accommodation-container {
+    max-width: 1100px;
+  }
+
+  .accommodation-header h2 {
+    font-size: 34px;
+  }
+
+  .accommodation-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+}

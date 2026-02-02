@@ -1,0 +1,221 @@
+/* ===============================
+   Sevas Page – Kondagattu Temple
+   =============================== */
+
+.sevas-section {
+  width: 100%;
+  padding: 120px 0;
+  background: linear-gradient(180deg, #FCFAF7, #FAF3E8);
+}
+
+.sevas-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 16px; /* safe horizontal spacing */
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+.sevas-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.sevas-icon {
+  font-size: 34px;
+  color: #F7931E;
+  margin-bottom: 10px;
+}
+
+.sevas-header h2 {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 36px;
+  color: #3A1E14;
+}
+
+.sevas-header p {
+  font-size: 14px;
+  color: #7A5C4F;
+}
+
+/* ===============================
+   Seva Cards
+   =============================== */
+
+.seva-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 50px;
+}
+
+.seva-card {
+  background: #FFFFFF;
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(58, 30, 20, 0.12);
+  font-size: 15px;
+  border-top: 4px solid #F7931E;
+  color: #3A1E14;
+}
+
+/* ===============================
+   Booking Section
+   =============================== */
+
+.booking-section h3 {
+  font-size: 22px;
+  color: #3A1E14;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.booking-form {
+  display: grid;
+  gap: 14px;
+  max-width: 520px;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(58,30,20,0.1);
+}
+
+.form-group svg {
+  color: #F7931E;
+}
+
+.form-group input,
+.form-group select {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  background: transparent;
+}
+
+.book-btn {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #F7931E, #F2C94C);
+  box-shadow: 0 10px 28px rgba(247, 147, 30, 0.45);
+}
+
+/* ===============================
+   Rules
+   =============================== */
+
+.booking-rules {
+  margin-top: 40px;
+  background: rgba(247, 147, 30, 0.12);
+  padding: 22px;
+  border-radius: 14px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking-rules h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #6B1D2E;
+}
+
+.booking-rules ul {
+  padding-left: 18px;
+}
+
+.booking-rules li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #4A2C1D;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+/* ---------- MOBILE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  .sevas-section {
+    padding-top: calc(72px + 40px); /* header safe */
+    padding-bottom: 100px;
+  }
+
+  .sevas-container {
+    max-width: 420px;
+  }
+
+  .sevas-header h2 {
+    font-size: 26px;
+  }
+
+  .sevas-header p {
+    font-size: 13px;
+  }
+
+  .seva-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 36px 12px;
+
+  }
+
+  .seva-card {
+    font-size: 14px;
+    padding: 36px 12px;
+  }
+
+  .booking-form {
+    max-width: 100%;
+  }
+}
+
+/* ---------- iPAD / TABLET (601px – 1024px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .sevas-section {
+    padding-top: calc(80px + 60px);
+    padding-bottom: 120px;
+  }
+
+  .sevas-container {
+    max-width: 760px;
+  }
+
+  .seva-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .seva-card {
+    font-size: 15px;
+  }
+}
+
+/* ---------- LAPTOP / DESKTOP (≥ 1025px) ---------- */
+@media (min-width: 1025px) {
+
+  .sevas-container {
+    max-width: 1000px;
+  }
+
+  .seva-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

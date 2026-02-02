@@ -1,0 +1,203 @@
+/* ===============================
+   Deities & Significance Section
+   =============================== */
+
+.deities-section {
+  width: 100%;
+  padding: 131px 0px;
+  background: linear-gradient(180deg, #FCFAF7, #FAF3E8);
+}
+
+.deities-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+.deities-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.deities-icon {
+  font-size: 34px;
+  color: #F7931E;
+  margin-bottom: 10px;
+}
+
+.deities-header h2 {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 36px;
+  color: #3A1E14;
+}
+
+.deities-header p {
+  font-size: 14px;
+  color: #7A5C4F;
+  margin-top: 6px;
+}
+
+/* ===============================
+   Cards
+   =============================== */
+
+.deities-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 18px 40px rgba(58, 30, 20, 0.12);
+  text-align: center;
+  border-top: 4px solid #F7931E;
+  transition: transform 0.25s ease;
+}
+
+.deities-card:hover {
+  transform: translateY(-6px);
+}
+
+.deities-card.primary {
+  border-top: 4px solid #F7931E;
+}
+
+.deities-card.highlight {
+  background: #FFFFFF;
+}
+
+/* ===============================
+   Icons
+   =============================== */
+
+.card-icon {
+  font-size: 26px;
+  color: #F2C94C;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   Text
+   =============================== */
+
+.deities-card h3 {
+  font-size: 15px;
+  color: #6B1D2E;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3A1E14;
+}
+
+.card-text {
+  font-size: 18px;
+  color: #4A2C1D;
+  font-weight: 600;
+}
+
+/* ===============================
+   Belief list
+   =============================== */
+
+.deities-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 14px;
+}
+
+.deities-card li {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #3A1E14;
+  font-weight: 600;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+
+/* ---------- MOBILE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  .deities-section {
+    padding-top: calc(72px + 40px); /* header safe */
+    padding-bottom: 100px;
+  }
+
+  .deities-container {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    padding: 0 28px;
+    gap: 20px;
+  }
+  
+
+
+  .deities-header h2 {
+    font-size: 26px;
+  }
+
+  .deities-header p {
+    font-size: 13px;
+  }
+
+  .deities-card {
+    padding: 24px 14px;
+    border-radius: 16px;
+  }
+
+  .deities-card:hover {
+    transform: none;
+  }
+
+  .card-title,
+  .card-text,
+  .deities-card li {
+    font-size: 16px;
+  }
+}
+
+/* ---------- iPAD / TABLET (601px – 1024px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .deities-section {
+    padding-top: calc(80px + 60px);
+    padding-bottom: 120px;
+  }
+
+  .deities-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+    padding: 0 20px;
+    gap: 24px;
+  }
+
+  .deities-header h2 {
+    font-size: 30px;
+  }
+
+  .deities-card {
+    padding: 26px 22px;
+  }
+
+  .deities-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- LAPTOP / DESKTOP (≥ 1025px) ---------- */
+@media (min-width: 1025px) {
+
+  .deities-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    padding: 0;
+  }
+}

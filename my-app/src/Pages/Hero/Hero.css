@@ -1,0 +1,151 @@
+/* ===============================
+   Hero Section – Kondagattu Temple
+   =============================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(58, 30, 20, 0.35),
+    rgba(0, 0, 0, 0.65)
+  );
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* Breadcrumb */
+.hero-breadcrumb {
+  font-size: 13px;
+  margin-bottom: 14px;
+  opacity: 0.85;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Title */
+.hero-title {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Tagline */
+.hero-quote {
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-size: 16px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+/* Actions */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hero-primary,
+.hero-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: "Noto Sans Telugu", sans-serif;
+}
+
+/* Primary */
+.hero-primary {
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #F7931E, #F2C94C);
+  box-shadow: 0 10px 30px rgba(247, 147, 30, 0.45);
+}
+
+.hero-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+.hero-secondary {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===============================
+   Highlights – 2 x 2 Grid
+   =============================== */
+
+.hero-highlights {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 28px;
+  max-width: 720px;
+}
+
+.hero-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font-size: 14.5px;
+}
+
+.hero-highlights svg {
+  color: #F2C94C;
+  font-size: 18px;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-quote {
+    font-size: 14px;
+  }
+
+  .hero-highlights {
+    grid-template-columns: 1fr;
+  }
+}

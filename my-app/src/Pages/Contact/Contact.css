@@ -1,0 +1,232 @@
+/* ===============================
+   Contact Section – Kondagattu
+   =============================== */
+
+.contact-section {
+  width: 100%;
+  padding: 103px 0;
+  background: linear-gradient(180deg, #FCFAF7, #FAF3E8);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px; /* safe horizontal spacing */
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h2 {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #3A1E14;
+}
+
+.contact-header p {
+  font-size: 14px;
+  color: #7A5C4F;
+  margin-top: 6px;
+}
+
+/* ===============================
+   Grid
+   =============================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+/* ===============================
+   Contact Info
+   =============================== */
+
+.contact-info {
+  background: #FFFFFF;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(58, 30, 20, 0.15);
+}
+
+.contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #3A1E14;
+}
+
+.contact-item svg {
+  color: #F7931E;
+  margin-top: 4px;
+}
+
+/* ===============================
+   Social
+   =============================== */
+
+.contact-social span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #6E5A4A;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #6B1D2E;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+}
+
+/* ===============================
+   Contact Form
+   =============================== */
+
+.contact-form {
+  background: #FFFFFF;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(58, 30, 20, 0.15);
+}
+
+.contact-form h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #3A1E14;
+}
+
+.contact-form svg {
+  color: #F7931E;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #E2D7C8;
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 110px;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #F7931E, #F2C94C);
+  box-shadow: 0 8px 22px rgba(247, 147, 30, 0.35);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+/* ---------- PHONE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding-top: calc(72px + 40px); /* header safe */
+    padding-bottom: 100px;
+  }
+
+  .contact-container {
+    max-width: 420px;
+    padding: 24px 28px;
+  }
+
+  .contact-header h2 {
+    font-size: 26px;
+  }
+
+  .contact-header p {
+    font-size: 13px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 44px 20px;
+  }
+}
+
+/* ---------- iPAD / TABLET (601px – 1024px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .contact-section {
+    padding-top: calc(80px + 60px);
+    padding-bottom: 120px;
+  }
+
+  .contact-container {
+    max-width: 760px;
+  }
+
+  .contact-header h2 {
+    font-size: 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 28px 24px;
+  }
+}
+
+/* ---------- LAPTOP / DESKTOP (≥ 1025px) ---------- */
+@media (min-width: 1025px) {
+
+  .contact-container {
+    max-width: 1200px;
+  }
+
+  .contact-header h2 {
+    font-size: 32px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+  }
+}

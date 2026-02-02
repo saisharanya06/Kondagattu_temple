@@ -1,0 +1,502 @@
+/* ===============================
+   Kondagattu Temple Header Theme
+   Mobile First
+   =============================== */
+
+.temple-header {
+  width: 100%;
+  height: 72px;
+  background: linear-gradient(90deg, #FCFAF7, #FAF3E8);
+  box-shadow: 0 3px 14px rgba(58, 30, 20, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+/* ===============================
+   Container
+   =============================== */
+
+.temple-header-container {
+  max-width: 1580px;
+  margin: auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============================
+   Brand Section
+   =============================== */
+
+.temple-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+.temple-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F7931E, #F2C94C);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(247, 147, 30, 0.35);
+}
+
+.temple-logo span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.temple-title h1 {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #3A1E14;
+}
+
+.temple-title p {
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-size: 12px;
+  color: #7A5C4F;
+}
+
+/* ===============================
+   Desktop Navigation (Hidden by default)
+   =============================== */
+
+.temple-nav {
+  display: none;
+}
+
+/* ===============================
+   Nav Links
+   =============================== */
+
+.temple-nav a {
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #3A1E14;
+  text-decoration: none;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+}
+
+.temple-nav a:hover {
+  color: #F7931E;
+  border-bottom: 2px solid #F2C94C;
+}
+
+/* ===============================
+   Dropdown Navigation
+   =============================== */
+
+.nav-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-parent {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 6px;
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-size: 14.5px;
+  color: #3A1E14;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-parent:hover {
+  color: #F7931E;
+  border-bottom: 2px solid #F2C94C;
+}
+
+.nav-group:hover .nav-parent {
+  background: #FFFFFF;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(58,30,20,0.12);
+}
+
+/* Dropdown */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(58,30,20,0.18);
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+.nav-group:hover .nav-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #3A1E14;
+}
+
+.nav-dropdown a:hover {
+  background: #FAF3E8;
+  color: #F7931E;
+}
+
+/* ===============================
+   Actions
+   =============================== */
+
+.temple-actions {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  background: #EFE8DE;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.temple-cta {
+  padding: 7px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 13.5px;
+  color: #fff;
+  background: linear-gradient(135deg, #F7931E, #F2C94C);
+}
+
+/* ===============================
+   Hamburger (Mobile)
+   =============================== */
+/* ===============================
+   Hamburger → Close Button
+   =============================== */
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;                 /* 🔥 rounded background */
+  background: #EFE8DE;                 /* soft cream */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Lines */
+.hamburger span {
+  width: 20px;
+  height: 3px;
+  background: #6E5A4A;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+/* ===============================
+   ACTIVE → X STATE
+   =============================== */
+
+.hamburger.active {
+  background: #EFE8DE;  /* same background like image */
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* ===============================
+   Mobile Menu (FIXED ALIGNMENT)
+   =============================== */
+/* ===============================
+   PREMIUM MOBILE MENU (REFERENCE STYLE)
+   =============================== */
+
+.mobile-menu {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 72px);
+  background: linear-gradient(180deg, #FCFAF7, #FAF3E8);
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1500;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Inner */
+.mobile-menu-inner {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px 18px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: fadeUp 0.5s ease;
+}
+
+/* Main links */
+.mobile-main {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3A1E14;
+  text-decoration: none;
+}
+
+.mobile-main.primary {
+  font-size: 19px;
+}
+
+/* Sections */
+.mobile-section {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A5C4F;
+  margin-bottom: 8px;
+}
+
+/* Card */
+.mobile-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 10px 28px rgba(58,30,20,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-card a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6B1D2E;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-card a:hover {
+  background: rgba(247,147,30,0.15);
+  transform: translateX(2px);
+}
+
+/* Divider */
+.mobile-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(58,30,20,0.15);
+  margin: 16px 0;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* DROPDOWN GROUP */
+.mobile-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dropdown title */
+.dropdown-title {
+  cursor: default;
+}
+
+/* Dropdown box */
+.dropdown-box {
+  margin-top: 6px;
+  padding: 10px 16px;
+  background: rgba(247, 147, 30, 0.08);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* SUB ITEMS (smaller) */
+.dropdown-box a {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #6B1D2E;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.dropdown-box a:hover {
+  color: #F7931E;
+}
+
+/* Language + Explore */
+.mobile-actions .lang-switch {
+  font-weight: 600;
+}
+
+.mobile-actions .temple-cta {
+  font-weight: 700;
+}
+
+/* ===============================
+   Mobile Groups
+   =============================== */
+
+.mobile-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.mobile-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3A1E14;
+  margin-bottom: 4px;
+}
+
+/* ===============================
+   Divider
+   =============================== */
+
+.mobile-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(58,30,20,0.15);
+  margin: 18px 0;
+}
+
+/* ===============================
+   Mobile Actions
+   =============================== */
+
+.mobile-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+
+/* ===============================
+   Tablet ≥ 600px
+   =============================== */
+
+@media (min-width: 600px) {
+  .temple-header {
+    height: 80px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+    height: calc(100vh - 80px);
+  }
+}
+
+/* ===============================
+   Laptop / Desktop ≥ 1024px
+   =============================== */
+
+@media (min-width: 1024px) {
+  .temple-header-container {
+    padding: 12px 24px;
+  }
+
+  .temple-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .temple-actions {
+    display: flex;
+  }
+
+  .hamburger,
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* ===============================
+   Accessibility
+   =============================== */
+
+.temple-nav a:focus,
+.nav-parent:focus,
+.nav-dropdown a:focus {
+  outline: none;
+  border-bottom: 2px solid #F2C94C;
+}

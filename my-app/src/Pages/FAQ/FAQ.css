@@ -1,0 +1,165 @@
+/* ===============================
+   FAQ Section – Kondagattu Temple
+   =============================== */
+
+.faq-section {
+  width: 100%;
+  padding: 155px 0;
+  background: linear-gradient(180deg, #FAF3E8, #FCFAF7);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 16px; /* safe horizontal spacing */
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-icon {
+  font-size: 36px;
+  color: #F7931E;
+  margin-bottom: 10px;
+}
+
+.faq-header h2 {
+  font-family: "Playfair Display", "Noto Sans Telugu", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #3A1E14;
+}
+
+/* ===============================
+   FAQ List
+   =============================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===============================
+   FAQ Item
+   =============================== */
+
+.faq-item {
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(58, 30, 20, 0.12);
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 18px 40px rgba(58, 30, 20, 0.18);
+}
+
+/* ===============================
+   Question
+   =============================== */
+
+.faq-question {
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3A1E14;
+}
+
+.faq-question svg {
+  font-size: 14px;
+  color: #F7931E;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question svg {
+  transform: rotate(180deg);
+}
+
+/* ===============================
+   Answer
+   =============================== */
+
+.faq-answer {
+  padding: 0 22px 18px;
+  font-size: 14.5px;
+  color: #4A2C1D;
+  line-height: 1.6;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+/* ---------- PHONE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  .faq-section {
+    padding-top: calc(72px + 40px); /* header safe */
+    padding-bottom: 100px;
+  }
+
+  .faq-container {
+    max-width: 420px;
+        padding: 16px 28px;
+
+  }
+
+  .faq-header h2 {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 16px;
+    font-size: 13.5px;
+  }
+}
+
+/* ---------- iPAD / TABLET (601px – 1024px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .faq-section {
+    padding-top: calc(80px + 60px);
+    padding-bottom: 120px;
+  }
+
+  .faq-container {
+    max-width: 720px;
+  }
+
+  .faq-header h2 {
+    font-size: 30px;
+  }
+
+  .faq-question {
+    font-size: 14.5px;
+  }
+}
+
+/* ---------- LAPTOP / DESKTOP (≥ 1025px) ---------- */
+@media (min-width: 1025px) {
+
+  .faq-container {
+    max-width: 900px;
+  }
+
+  .faq-header h2 {
+    font-size: 32px;
+  }
+}
