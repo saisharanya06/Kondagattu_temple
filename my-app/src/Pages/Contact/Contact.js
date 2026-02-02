@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="contact-social">
+            {/* <div className="contact-social">
               <span>
                 {lang === "te"
                   ? "సోషల్ మీడియా"
@@ -74,8 +74,8 @@ const Contact = () => {
                 <a href="#" aria-label="Twitter">
                   <FaTwitter />
                 </a>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
 
           {/* Contact Form */}
