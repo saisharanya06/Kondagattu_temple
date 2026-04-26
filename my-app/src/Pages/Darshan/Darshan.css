@@ -4,15 +4,14 @@
 
 .darshan-section {
   width: 100%;
-  padding: 165px 0;
-  background: linear-gradient(180deg, #FCFAF7, #FAF3E8);
+  padding: 120px 0;
+  background: linear-gradient(180deg, #FCFAF7, #FDF7F0);
 }
 
 .darshan-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
-  padding: 0 16px; /* safe horizontal spacing */
-  text-align: center;
+  padding: 0 20px;
   color: #3A1E14;
 }
 
@@ -21,48 +20,74 @@
    =============================== */
 
 .darshan-header {
-  margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .darshan-icon {
-  font-size: 30px;
+  font-size: 40px;
   color: #F7931E;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .darshan-header h2 {
   font-family: "Playfair Display", "Noto Sans Telugu", serif;
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  color: #3A1E14;
 }
 
 .darshan-subtitle {
-  font-size: 14px;
+  font-size: 15px;
   color: #7A5C4F;
+  letter-spacing: 1px;
 }
 
 /* ===============================
-   Timings Box
+   Grid Layout
    =============================== */
+
+.darshan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ===============================
+   Info Card (Left Side)
+   =============================== */
+
+.darshan-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .darshan-timings {
   background: #FFFFFF;
-  border-radius: 18px;
+  border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 20px 40px rgba(58, 30, 20, 0.15);
-  margin-bottom: 28px;
-  border-top: 4px solid #F7931E;
+  box-shadow: 0 15px 35px rgba(58, 30, 20, 0.08);
+  border-left: 5px solid #F7931E;
+}
+
+.darshan-timings h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #3A1E14;
+  border-bottom: 1px solid #F0E6D8;
+  padding-bottom: 10px;
 }
 
 .timing-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
-  font-family: "Noto Sans Telugu", sans-serif;
+  padding: 15px 0;
   font-size: 16px;
-  border-bottom: 1px dashed #E2D6C8;
+  border-bottom: 1px dashed #EEE0D0;
 }
 
 .timing-row:last-child {
@@ -71,108 +96,139 @@
 
 .timing-row strong {
   color: #6B1D2E;
+  font-weight: 600;
 }
-
-/* ===============================
-   Note
-   =============================== */
 
 .darshan-note {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(247, 147, 30, 0.12);
-  padding: 14px 20px;
-  border-radius: 12px;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(247, 147, 30, 0.1);
+  padding: 18px;
+  border-radius: 15px;
   font-size: 14px;
   color: #6B1D2E;
+  line-height: 1.5;
 }
 
 .darshan-note svg {
   color: #F7931E;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   Booking Card (Right Side)
+   =============================== */
+
+.darshan-booking-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(58, 30, 20, 0.12);
+  border-top: 6px solid #6B1D2E;
+}
+
+.darshan-booking-card h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #3A1E14;
+  text-align: center;
+}
+
+.darshan-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.darshan-form-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #F8F4F0;
+  padding: 14px 18px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.darshan-form-group:focus-within {
+  background: #FFFFFF;
+  border-color: #F7931E;
+  box-shadow: 0 5px 15px rgba(247, 147, 30, 0.1);
+}
+
+.darshan-form-group svg {
+  color: #F7931E;
+  font-size: 18px;
+}
+
+.darshan-form-group input,
+.darshan-form-group select {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+  color: #3A1E14;
+}
+
+.darshan-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.darshan-book-btn {
+  margin-top: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #6B1D2E, #8B2D3E);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(107, 29, 46, 0.25);
+}
+
+.darshan-book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(107, 29, 46, 0.35);
+  background: linear-gradient(135deg, #8B2D3E, #A63D4E);
 }
 
 /* ===============================
    RESPONSIVE
    =============================== */
 
-/* ---------- MOBILE (≤ 600px) ---------- */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .darshan-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
   .darshan-section {
-    padding-top: calc(72px + 40px); /* header safe */
-    padding-bottom: 100px;
-  }
-
-  .darshan-container {
-    max-width: 420px;
-    padding: 32px 30px;
-  }
-
-  .darshan-header h2 {
-    font-size: 26px;
-  }
-
-  .darshan-subtitle {
-    font-size: 13px;
-  }
-
-  .darshan-timings {
-    padding: 32px 30px;
-    border-radius: 16px;
-  }
-
-  .timing-row {
-    flex-direction: column;
-    gap: 6px;
-    font-size: 14.5px;
-    text-align: center;
-  }
-
-  .darshan-note {
-    font-size: 13px;
-    padding: 12px 16px;
-  }
-}
-
-/* ---------- iPAD / TABLET (601px – 1024px) ---------- */
-@media (min-width: 601px) and (max-width: 1024px) {
-
-  .darshan-section {
-    padding-top: calc(80px + 60px);
-    padding-bottom: 120px;
-  }
-
-  .darshan-container {
-    max-width: 720px;
+    padding: 100px 0;
   }
 
   .darshan-header h2 {
     font-size: 30px;
   }
-
-  .darshan-timings {
-    padding: 26px 24px;
-  }
-
-  .timing-row {
-    font-size: 15.5px;
-  }
 }
 
-/* ---------- LAPTOP / DESKTOP (≥ 1025px) ---------- */
-@media (min-width: 1025px) {
-
-  .darshan-container {
-    max-width: 900px;
+@media (max-width: 600px) {
+  .darshan-booking-card {
+    padding: 25px;
   }
 
-  .darshan-header h2 {
-    font-size: 34px;
+  .darshan-form-row {
+    grid-template-columns: 1fr;
   }
 
-  .timing-row {
-    font-size: 16px;
+  .darshan-header {
+    margin-bottom: 30px;
   }
 }

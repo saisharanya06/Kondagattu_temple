@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import { useLanguage } from "../../context/LanguageContext";
+import { Link } from "react-router-dom";
 import heroImage from "../../assets/hero-temple.jpg";
 import {
   FaHome,
@@ -48,15 +49,15 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="hero-actions">
-          <button className="hero-primary">
+          <Link to="/darshan" className="hero-primary">
             <FaArrowRight />
             {lang === "te" ? "దర్శనం బుక్ చేయండి" : "Book Darshan"}
-          </button>
+          </Link>
 
-          <button className="hero-secondary">
+          <Link to="/sevas" className="hero-secondary">
             <FaDonate />
-            {lang === "te" ? "విరాళం చేయండి" : "Donate Now"}
-          </button>
+            {lang === "te" ? "పూజ బుక్ చేయండి" : "Book Now"}
+          </Link>
         </div>
 
         {/* Highlights (2 x 2 Grid) */}
