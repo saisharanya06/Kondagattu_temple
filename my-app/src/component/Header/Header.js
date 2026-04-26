@@ -106,7 +106,6 @@ const Header = () => {
             <div className="lang-switch" onClick={toggleLanguage}>
               🌐 <span>{lang === "te" ? "EN" : "TE"}</span>
             </div>
-            <button className="temple-cta">{t.expand}</button>
           </div>
 
           <div
@@ -173,7 +172,6 @@ const Header = () => {
       <div className="lang-switch" onClick={toggleLanguage}>
         🌐 <span>{lang === "te" ? "EN" : "TE"}</span>
       </div>
-      <button className="temple-cta">{t.expand}</button>
     </div>
 
   </div>
